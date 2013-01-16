@@ -1,0 +1,30 @@
+.wrape.homeone
+  .fallback
+    = image_tag "sliders/home_page_1/home_page_1_fallback.jpg", :width => 940, :height => 351
+  = render :partial => 'index_slider'
+.content_block
+  .text_bar
+    .wraper
+      %h2
+        = t('index.slogan')
+        %span
+          = raw t('index.slogin_more')
+      = link_to t('index.start_now'), omniauth_authorize_path(User, 'twitter', :fee => 0), :class => "buy btn_l"
+      .widget
+        %h3
+          = t('index.no_prog')
+        %p
+          = t('index.no_prog_detail')
+  .wraper
+    .features_block
+      %ul
+        - t('index.features').each do |feature|
+          %li{:class => feature["class"]}
+            %a.circle_link{:href => "#"}  
+            %h4
+              %span
+                = feature["title"]
+            %p
+              = feature["content"]
+- content_for :description, t('index.description')
+- content_for :title, t('index.title')

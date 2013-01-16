@@ -1,0 +1,12 @@
+#obo_slider
+  - t('index.sliders').each do |slider|
+    .oneByOne_item
+      = image_tag(slider["image"], :class => 'wp1_3 ')
+      %span.txt1.blue
+        = slider["txt1"]
+      %span.txt2
+        = slider["txt2"]
+      %span.txt3.short
+        = slider["txt3"]
+      %span.txt4.txt4up
+        = link_to t('index.start_now'), omniauth_authorize_path(User, 'twitter', :fee => 0), :class => 'btn_l'

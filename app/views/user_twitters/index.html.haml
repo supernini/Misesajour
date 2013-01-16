@@ -1,0 +1,14 @@
+.breadcrumb
+  %ul
+    %li
+      = link_to t('header.menu.dashboard'), dashboard_url(:src => 'ajax'), :remote => true, :onclick => "$('#tabs ul li').removeClass('active');$('#tabs ul li:first').addClass('active');", :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = t('header.menu.twitter_account')
+.featuresx_block
+  %h5(style='float:right')
+    = link_to t("user_twitters.add_twitter"), omniauth_authorize_path(User, 'twitter'), :class => 'btn_l' if current_user.can_add_account
+  %h1
+    = t('header.menu.twitter_account')
+  %ul
+    - @user_twitters.each do |user_twitter|
+      = render :partial => 'item', :locals => {:user_twitter => user_twitter}

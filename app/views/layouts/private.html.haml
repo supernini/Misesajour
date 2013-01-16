@@ -1,0 +1,52 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+    %title Home
+    %link{:href => "/assets/favicon.ico", :rel => "icon", :type => "image/png"}/
+    %link{:href => "/assets/apple-touch-icon.png", :rel => "apple-touch-icon"}
+    %link{:href => "/assets/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
+    %link{:href => "/assets/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}
+    /[if lt IE 9]
+      <script src="scripts/ie9.js">IE7_PNG_SUFFIX=".png";</script>
+    %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic", :rel => "stylesheet", :type => "text/css"}
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = render :partial => 'layouts/google'
+    = csrf_meta_tags
+    :javascript
+      $(function(){
+          $('#obo_slider').oneByOne({
+              className: 'oneByOne1',
+              easeType: 'random',
+              slideShow: true
+          });
+
+      })
+
+  %body
+    .wraper
+      = render :partial => 'layouts/header'
+    .content_block
+      .top_title
+        .wraper
+          %h2
+            = t('private.welcome')
+            = "#{current_user.user_twitters.first.username}"
+            %span
+              = t('private.slogan')
+      .wraper
+        .sidebar
+          .left_nav
+            #tabs
+              %ul.tab_select
+                %li.active
+                  = link_to t('header.menu.dashboard'), dashboard_url(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+                %li
+                  = link_to t('header.menu.rss_sitemap'), rss_providers_url(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+                %li
+                  = link_to t('header.menu.twitter_account'), user_twitters_url(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+        .portfolio_sidebar.portfolio_sidebar_right
+          = yield
+    = render :partial => 'layouts/footer'

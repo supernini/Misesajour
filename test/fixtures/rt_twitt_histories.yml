@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rt_twitt: 
+  to_send_at: 2012-11-06 20:40:53
+  send_at: MyString
+  twitt: MyText
+
+two:
+  rt_twitt: 
+  to_send_at: 2012-11-06 20:40:53
+  send_at: MyString
+  twitt: MyText

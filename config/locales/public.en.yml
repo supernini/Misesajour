@@ -1,0 +1,101 @@
+en:
+  footer:
+    slogan: "Stay connected with your favorite social network"
+    go_top: "Up"
+  slogan: "Twitt automatically  sitemap and rss feed from your websites"
+  user_twitters:
+    add_twitter: "Add new twitter"
+  rss_providers:
+    perday: "(Twitt per day)"
+    add_feed : "Add new feed"
+    connect_error: "Feed is down, can't connect"
+    item_detail: "%{itemscount} elements, %{sentcount} twitt sent"
+  dashboard:
+    q1: "Where to start?"
+    a10: "If you are here is that you have already created your account and therefore you have linked your twitter account."
+    a11: "The next step is to add an RSS feed or a site map to your account. Click <strong>%{whereclic}</strong> your left. Once added, the first tomorrows will be broadcast tweets"
+    q2: " Add a twitter account"
+    a2: "Depending on your package you can add twitter accounts. Each account can broadcast autand twitter stream you want"
+    q3: "I want to see the last 3 tweets broadcast?"
+    a3: "Feed :"
+  private:
+    welcome: "Welcome "
+    slogan: "Your satisfaction! our goal!"
+  index:
+    title: "Twitt broadcaster for Webmasters"
+    description: "Misesajour addresses all webmasters and automatically enables all your twitter stream and Sitemap Rss to maximize your SEO."
+    slogan: "You have a sitemap or an RSS feed ?"
+    slogin_more: "<strong>Start now</strong> to broadcast them on twitter"
+    start_now: "Start now !"
+    no_prog: "Try version for 4.95 Euro !"
+    no_prog_detail: "Just test and you will love"
+    sliders:
+      [
+        {image: "twitter-bird-logo.png",
+        class: "slide2_bot",
+        txt1: "Boost Your SEO with twitter",
+        txt2: "Tweet your content!",
+        txt3: "Misesajour.com automatically delivers your content through your Twitter accounts to boost your SEO and your presence on social media.",
+        },
+        {image: "prog.png",
+        class: "slide1_bot",
+        txt1: "no programming",
+        txt2: "Nothing to install",
+        txt3: "No programming, no installation! In less than 5 minutes, tweet your rss feeds and your sitemaps automatically boost your twitter account and increase your traffic!"
+        }
+      ]
+    features:
+      [
+        {class: "design",
+        title: "Easy",
+        content: "Register, add a sitemap or rss feed and select the frequency distribution"},
+        {class: "support",
+        title: "Social networks",
+        content: "Be present on social media, be relevant, without losing your time"},
+        {class: "flexible",
+        title: "Sitemap",
+        content: "Enhance your sitemaps for Google optimize your SEO."},
+        {class: "seo",
+        title: "RSS Feed",
+        content: "Increase your visibility by disseminating your RSS via twitter automatically"},
+        {class: "easy",
+        title: "Wordpress",
+        content: "All content of your wordpress blog, twitter directly without doing anything!"}
+      ]
+  pricing:
+    title: "Rate for twitt Rss Feed and sitemap"
+    description: "We offer 3 different package webmaster (price) to twitter and will automatically rss sitemap and all their sites."
+    sub_title: "Your Satisfaction: Our goal"
+    content_title: "Pricing"
+    content: "Misesajour offers a service every webmaster who want to \"boost\" their traffic by using twitter. The concept is effective and does not require any programming, simply determine the \"package\" and start to twitt automatically all your Sitemap or RSS and for all your sites and the desired frequency"
+    montly: "Montly"
+    free:
+      title: "Package Starter"
+      main: "4"
+      cent: "95"
+      arg1: "1 tweet per day"
+      arg2: "1 RSS feed or 1 sitemap"
+      arg3: "1 Twitter account"
+      arg4: ""
+      arg5: "No RT"
+      arg6: "Random date for twitt"
+    pro:
+      title: "Package Pro"
+      main: "9"
+      cent: "95"
+      arg1: "5 tweets for each feed per day"
+      arg2: "5 RSS feed or sitemaps"
+      arg3: "3 Twitter account"
+      arg4: ""
+      arg5: "10 RT per account per day"
+      arg6: "Random date for twitt"
+    ultimate:
+      title: "Package Ultimate"
+      main: "49"
+      cent: "95"
+      arg1: "12 tweets for each feed per day"
+      arg2: "Unlimited RSS feed or sitemaps"
+      arg3: "Unlimited twitter account"
+      arg4: ""
+      arg5: "50 RT per account per day"
+      arg6: "Random date for twitt"

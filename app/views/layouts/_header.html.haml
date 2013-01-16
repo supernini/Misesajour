@@ -1,0 +1,28 @@
+%header.header
+  = link_to "Misesajour", root_url, :class => 'logo'
+  %strong
+    = t('slogan')
+  %nav
+    %ul
+      - if current_user
+        %li
+          = link_to t('header.menu.dashboard'), dashboard_url
+      - else
+        %li
+          = link_to t('header.menu.home'), root_url
+      %li
+        = link_to t('header.menu.pricing'), ( I18n.locale.to_s == 'fr' ? pricing_fr_path() : pricing_en_path())
+      - if current_user
+        %li
+          = link_to t('header.menu.logout'), destroy_user_session_path, :method => :delete
+
+      - else
+        - User.omniauth_providers.each do |provider|
+          %li
+            = link_to t('header.menu.sign_in'), omniauth_authorize_path(User, provider)
+      - if request.subdomains.first=='en'
+        %li
+          = link_to t('header.menu.french'), 'http://www.misesajour.com'
+      - else
+        %li
+          = link_to t('header.menu.english'), 'http://en.misesajour.com'

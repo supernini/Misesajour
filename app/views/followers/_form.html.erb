@@ -1,0 +1,65 @@
+<%= form_for(@follower) do |f| %>
+  <% if @follower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@follower.errors.count, "error") %> prohibited this follower from being saved:</h2>
+
+      <ul>
+      <% @follower.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_twitter %><br />
+    <%= f.text_field :user_twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_name %><br />
+    <%= f.text_field :screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :followers_count %><br />
+    <%= f.number_field :followers_count %>
+  </div>
+  <div class="field">
+    <%= f.label :friends_count %><br />
+    <%= f.number_field :friends_count %>
+  </div>
+  <div class="field">
+    <%= f.label :status_count %><br />
+    <%= f.number_field :status_count %>
+  </div>
+  <div class="field">
+    <%= f.label :lang %><br />
+    <%= f.text_field :lang %>
+  </div>
+  <div class="field">
+    <%= f.label :last_tweet_date %><br />
+    <%= f.datetime_select :last_tweet_date %>
+  </div>
+  <div class="field">
+    <%= f.label :following %><br />
+    <%= f.check_box :following %>
+  </div>
+  <div class="field">
+    <%= f.label :follow_request_send %><br />
+    <%= f.check_box :follow_request_send %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

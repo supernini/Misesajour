@@ -1,0 +1,15 @@
+.breadcrumb
+  %ul
+    %li
+      = link_to t('header.menu.dashboard'), dashboard_url(:src => 'ajax'), :remote => true, :onclick => "$('#tabs ul li').removeClass('active');$('#tabs ul li:first').addClass('active');", :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = t('header.menu.rss_sitemap')
+.clear
+.featuresx_block
+  %h5(style='float:right')
+    = link_to t('rss_providers.add_feed'), new_rss_provider_path(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :class => 'btn_l' if current_user and current_user.can_add_rss_provider
+  %h1
+    = t('header.menu.rss_sitemap')
+  %ul
+    - @rss_providers.each do |rss_provider|
+      = render :partial => 'rss_providers/item', :locals => {:rss_provider => rss_provider}

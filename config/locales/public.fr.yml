@@ -1,0 +1,113 @@
+fr:
+  footer:
+    slogan: "Restez connecté avec votre réseau social préféré"
+    go_top: "Retour en haut"
+  slogan: "Webmaster ! Twitter vos sitemap et flux rss de vos sites automatiquement"
+  user_twitters:
+    add_twitter: "Ajouter un twitter"
+  rss_providers:
+    perday: "(Twitt par jour)"
+    required: "(requis)"
+    add_feed : "Ajouter un flux"
+    connect_error: "Le flux ne repond pas"
+    item_detail: "%{itemscount} élément(s), %{sentcount} twitt envoyé(s)"
+  dashboard:
+    q1: "Par où commencer ?"
+    a10: "Si vous êtes ici c'est que vous êtes inscrit à notre service et que vous avez associé votre compte avec twitter."
+    a11: "La prochaine étape consiste à ajouter un flux RSS ou un Sitemap à votre compte. Cliquez sur \"<strong>%{whereclic}</strong>\" à votre gauche. Vos premiers Twitts seront diffusés d'ici demain."
+    q2: " Ajouter un compte twitter"
+    a2: "En fonction de votre forfait vous pouvez ajouter un nombre de comptes Twitter. Chaque compte Twitter peut diffuser autant de flux que vous le souhaitez"
+    q3: "Voir les trois(3) derniers twitts diffusés ?"
+    a3: "Flux :"
+  private:
+    welcome: "Bienvenue "
+    slogan: "Vous faciliter la tâche, notre unique objectif !"
+  index:
+    title: "Diffuseur de Twitt pour Webmasters"
+    description: "Misesajour s'adresse à tous les webmasters et permet de twitter automatiquement tous vos flux Rss et Sitemap afin de maximiser votre référencement."
+    slogan: "Vous avez un sitemap ou un flux RSS ?"
+    slogin_more: "<strong>Dès maintenant</strong> diffusez-les sur twitter"
+    start_now: "Commencer !"
+    no_prog: "Version d'essai à 4.95 Euro !"
+    no_prog_detail: "Petit prix ! Testez simplement et vous serez séduit"
+    sliders:
+      [
+        {image: "twitter-bird-logo.png",
+        class: "slide2_bot",
+        txt1: "Boostez votre référencement avec twitter",
+        txt2: "Twittez votre contenu !",
+        txt3: "Misesajour.com diffuse votre contenu automatiquement via vos comptes Twitter, pour booster votre référencement et votre présence sur les médias sociaux.",
+        },
+        {image: "prog.png",
+        class: "slide1_bot",
+        txt1: "Aucune programmation",
+        txt2: "Rien à installer",
+        txt3: "Aucune programmation, aucune installation ! En moins de 5 minutes, tweetez vos feeds rss et vos sitemaps automatiquement pour dynamiser votre compte twitter et augmenter votre trafic!"
+        }
+      ]
+    features:
+      [
+        {class: "design",
+        title: "Facile",
+        content: "Inscrivez-vous, ajoutez un feed rss ou un sitemap et choisissez la fréquence de diffusion"},
+        {class: "support",
+        title: "Réseaux sociaux",
+        content: "Soyez présent sur les médias sociaux, soyez pertinent, sans y perdre tout votre temps"},
+        {class: "flexible",
+        title: "Sitemap",
+        content: "Valorisez vos sitemaps pour optimiser votre référencement Google."},
+        {class: "seo",
+        title: "Flux RSS",
+        content: "Augmentez votre visibilité en diffusant vos flux rss via twitter de façon automatique"},
+        {class: "easy",
+        title: "Wordpress",
+        content: "Tout le contenu de votre blog wordpress, directement sur twitter sans rien faire !"}
+      ]
+  pricing:
+    title: "Tarif pour twitter Flux Rss et sitemap"
+    description: "Nous offrons aux webmaster 3 différents package (tarif) permettant de twitter à volonté et automatiquement les flux rss et sitemap de tous leurs sites."
+    sub_title: "Votre satisfaction : Notre objectif"
+    content_title: "Grille des tarifs"
+    content: "Misesajour offre un service à tous les webmaster qui souhaitent \"booster\" leur traffic en se servant de twitter. Le concept est efficace et ne nécessite aucune programmation, il suffit simplement de déterminer le \"package\" qui vous convient dans la grille des tarifs qui suit afin de twitter automatiquement tous vos flus RSS ou Sitemap et ce, pour tous vos sites et à la fréquence désirée"
+    montly: "mensuel"
+    free:
+      title: "Package Starter"
+      main: "4"
+      cent: "95"
+      arg2: "1 flux RSS ou 1 sitemap"
+      arg3: "1 compte Twitter"
+      arg1: "1 tweet par jour"
+      arg4: ""
+      arg5: "Pas de RT"
+      arg6: "Date aléatoire pour les twitts"
+    pro:
+      title: "Package Pro"
+      main: "9"
+      cent: "95"
+      arg2: "5 flux RSS ou sitemaps"
+      arg3: "3 comptes Twitter"
+      arg1: "5 tweets / jour pour chaque flux (flux illimités)"
+      arg4: ""
+      arg5: "10 RT par compte et par jour"
+      arg6: "Date aléatoire pour les twitts"
+    ultimate:
+      title: "Package Ultimate"
+      main: "49"
+      cent: "95"
+      arg2: "RSS ou sitemaps illimités"
+      arg3: "Comptes Twitter illimités"
+      arg1: "12 tweets / jour pour chaque flux (flux illimités)"
+      arg4: ""
+      arg5: "50 RT par compte et par jour"
+      arg6: "Date aléatoire pour les twitts"
+  helpers:
+    label:
+      rt_twitt:
+        frequence: 'Fréquence'
+      rss_provider:
+        name: 'Nom'
+        user_twitter: 'Compte twitter'
+        url: 'Url du feed (avec http://)'
+        twitt_prefix: 'Préfixe twitter'
+        twitt_sufffix: 'Suffixe Twitter'
+        frequence: 'Fréquence'

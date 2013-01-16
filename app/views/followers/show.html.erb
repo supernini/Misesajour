@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User twitter:</b>
+  <%= @follower.user_twitter %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @follower.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @follower.name %>
+</p>
+
+<p>
+  <b>Screen name:</b>
+  <%= @follower.screen_name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @follower.url %>
+</p>
+
+<p>
+  <b>Followers count:</b>
+  <%= @follower.followers_count %>
+</p>
+
+<p>
+  <b>Friends count:</b>
+  <%= @follower.friends_count %>
+</p>
+
+<p>
+  <b>Status count:</b>
+  <%= @follower.status_count %>
+</p>
+
+<p>
+  <b>Lang:</b>
+  <%= @follower.lang %>
+</p>
+
+<p>
+  <b>Last tweet date:</b>
+  <%= @follower.last_tweet_date %>
+</p>
+
+<p>
+  <b>Following:</b>
+  <%= @follower.following %>
+</p>
+
+<p>
+  <b>Follow request send:</b>
+  <%= @follower.follow_request_send %>
+</p>
+
+
+<%= link_to 'Edit', edit_follower_path(@follower) %> |
+<%= link_to 'Back', followers_path %>

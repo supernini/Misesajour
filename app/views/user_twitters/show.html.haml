@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @user_twitter.user %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @user_twitter.username %>
+</p>
+
+<p>
+  <b>Twitter token:</b>
+  <%= @user_twitter.twitter_token %>
+</p>
+
+<p>
+  <b>Twitter secret token:</b>
+  <%= @user_twitter.twitter_secret_token %>
+</p>
+
+<p>
+  <b>Public token:</b>
+  <%= @user_twitter.public_token %>
+</p>
+
+<p>
+  <b>Provider:</b>
+  <%= @user_twitter.provider %>
+</p>
+
+<p>
+  <b>Uid:</b>
+  <%= @user_twitter.uid %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @user_twitter.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_twitter_path(@user_twitter) %> |
+<%= link_to 'Back', user_twitters_path %>

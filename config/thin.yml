@@ -1,0 +1,14 @@
+---
+address: 0.0.0.0
+pid: /home/httpd/vhosts/Misesajour/shared/pids/thin.pid
+wait: 30
+port: 8381
+timeout: 30
+log: /home/httpd/vhosts/Misesajour/shared/log/thin.log
+max_conns: 1024
+require: []
+
+environment: production
+max_persistent_conns: 512
+daemonize: true
+servers: 3

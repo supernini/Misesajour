@@ -1,0 +1,19 @@
+%li{:id => "li_flux_#{rss_provider.id}"}
+  = link_to '', edit_rss_provider_path(rss_provider), :class => 'circle_link'
+  %h4
+    %span{:class => (rss_provider.is_rss ? 'rss' : 'sitemap')}
+    = truncate rss_provider.name, :length => 15, :omission => '...'
+  %h5
+    = truncate raw(rss_provider.title), :length => 25, :omission => '...'
+  %span
+    - if rss_provider.failcount !=0
+      = t('rss_providers.connect_error')
+    - else
+      = t('rss_providers.item_detail', :itemscount => rss_provider.rss_items.count, :sentcount =>rss_provider.rss_twitts.sent.count)
+    %br/
+    = "Update : #{rss_provider.last_build_date}"
+  %br/
+  = link_to '', rss_provider, :method => :delete, :data => { :confirm => 'Are you sure?' }, :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :class => 'delete', :alt => 'Effacer ce flux'
+  = link_to '', rss_provider, :method => :get, :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :class => 'refresh', :alt => 'Rafraichir ce flux'
+  - link_to '', rt_twitt_url(:id => rss_provider.id, :src => 'ajax'), :method => :get, :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :class => 'settingsrt', :alt => 'Configuration des RT'
+  = link_to '', edit_rss_provider_path(rss_provider, :src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :method => :get, :class => 'settings', :alt => 'Editer'

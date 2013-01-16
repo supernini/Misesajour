@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rss_provider: 
+  title: MyString
+  description: MyText
+  pubdate: MyString
+  link: MyString
+  twitt_count: 1
+
+two:
+  rss_provider: 
+  title: MyString
+  description: MyText
+  pubdate: MyString
+  link: MyString
+  twitt_count: 1

@@ -1,0 +1,7 @@
+%li{:id => "li_element_#{user_twitter.id}"}
+  = image_tag(user_twitter.image_url, :style => 'float: left; margin-right: 10px;')
+  %h4=user_twitter.username
+  %p
+    %span
+  %username
+    = link_to '', user_twitter, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right', :class => 'delete', :alt => 'Effacer ce compte twitter'

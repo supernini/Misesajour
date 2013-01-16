@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_twitter: 
+  id: 1
+  name: MyString
+  screen_name: MyString
+  url: MyString
+  followers_count: 1
+  friends_count: 1
+  status_count: 1
+  lang: 
+  last_tweet_date: 2013-01-05 08:12:32
+  following: false
+  follow_request_send: false
+
+two:
+  user_twitter: 
+  id: 1
+  name: MyString
+  screen_name: MyString
+  url: MyString
+  followers_count: 1
+  friends_count: 1
+  status_count: 1
+  lang: 
+  last_tweet_date: 2013-01-05 08:12:32
+  following: false
+  follow_request_send: false

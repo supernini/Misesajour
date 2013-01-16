@@ -1,0 +1,3 @@
+$('#li_element_<%=@rss_provider.id%>').replaceWith('<%= escape_javascript(render :partial => "item", :locals => {:rss_provider => @rss_provider})%>');
+$('.features_block ul li, .features2_block ul li, .bc_list ul li, .features5_block ul li, .services_option4 ul li, .small_icons ul li, .medium_icons ul li, .large_icons ul li').prepend('<span class="circle"></span>');
+

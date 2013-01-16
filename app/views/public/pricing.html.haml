@@ -1,0 +1,97 @@
+.content_block
+  .top_title
+    .wraper
+      %h2
+        = t('header.menu.pricing')
+        %span
+          = t('pricing.sub_title')
+      %ul
+        %li
+          = link_to 'Accueil', root_path
+        %li
+          = t('pricing.title')
+  .wraper
+    .pricing_option.pricing_option3
+      %h4.bord
+        = t('pricing.content_title')
+      %p
+        = t('pricing.content')
+      %ul
+        %li
+          %h4
+            = t('pricing.free.title')
+          .price
+            %strong $
+            %span
+              = t('pricing.free.main')
+            %sup
+              = t('pricing.free.cent')
+            %em
+              = t('pricing.montly')
+          %p
+            = t('pricing.free.arg2')
+          %p
+            = t('pricing.free.arg3')
+          %p
+            = t('pricing.free.arg1')
+          %p
+            = t('pricing.free.arg4')
+          %p
+            = t('pricing.free.arg5')
+          %p
+            = t('pricing.free.arg6')
+          %p
+            = link_to t('index.start_now'), omniauth_authorize_path(User, 'twitter', :fee => 0), :class => 'btn_m'
+        %li.active
+          .active_bg
+            %h4
+              = t('pricing.pro.title')
+            .price
+              %strong $
+              %span
+                = t('pricing.pro.main')
+              %sup
+                = t('pricing.pro.cent')
+              %em
+                = t('pricing.montly')
+            %p
+              = t('pricing.pro.arg2')
+            %p
+              = t('pricing.pro.arg3')
+            %p
+              = t('pricing.pro.arg1')
+            %p
+              = t('pricing.pro.arg4')
+            %p
+              = t('pricing.pro.arg5')
+            %p
+              = t('pricing.pro.arg6')
+            %p
+              = link_to t('index.start_now'), omniauth_authorize_path(User, 'twitter', :fee => 1), :class => 'btn_m'
+        %li
+          %h4
+            = t('pricing.ultimate.title')
+          .price
+            %strong $
+            %span
+              = t('pricing.ultimate.main')
+            %sup
+              = t('pricing.ultimate.cent')
+            %em
+              = t('pricing.montly')
+          %p
+            = t('pricing.ultimate.arg2')
+          %p
+            = t('pricing.ultimate.arg3')
+          %p
+            = t('pricing.ultimate.arg1')
+          %p
+            = t('pricing.ultimate.arg4')
+          %p
+            = t('pricing.ultimate.arg5')
+          %p
+            = t('pricing.ultimate.arg6')
+          %p
+            = link_to t('index.start_now'), omniauth_authorize_path(User, 'twitter', :fee => 2), :class => 'btn_m'
+- content_for :description, t('pricing.description')
+- content_for :title, t('pricing.title')

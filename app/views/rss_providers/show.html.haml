@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @rss_provider.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @rss_provider.user %>
+</p>
+
+<p>
+  <b>Frequence:</b>
+  <%= @rss_provider.frequence %>
+</p>
+
+<p>
+  <b>Last run:</b>
+  <%= @rss_provider.last_run %>
+</p>
+
+<p>
+  <b>Run count:</b>
+  <%= @rss_provider.run_count %>
+</p>
+
+<p>
+  <b>Twitt prefix:</b>
+  <%= @rss_provider.twitt_prefix %>
+</p>
+
+<p>
+  <b>Twitt suffix:</b>
+  <%= @rss_provider.twitt_suffix %>
+</p>
+
+
+<%= link_to 'Edit', edit_rss_provider_path(@rss_provider) %> |
+<%= link_to 'Back', rss_providers_path %>

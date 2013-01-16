@@ -1,0 +1,33 @@
+<h1>Listing rss_items</h1>
+
+<table>
+  <tr>
+    <th>Rss provider</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Pubdate</th>
+    <th>Link</th>
+    <th>Twitt count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rss_items.each do |rss_item| %>
+  <tr>
+    <td><%= rss_item.rss_provider %></td>
+    <td><%= rss_item.title %></td>
+    <td><%= rss_item.description %></td>
+    <td><%= rss_item.pubdate %></td>
+    <td><%= rss_item.link %></td>
+    <td><%= rss_item.twitt_count %></td>
+    <td><%= link_to 'Show', rss_item %></td>
+    <td><%= link_to 'Edit', edit_rss_item_path(rss_item) %></td>
+    <td><%= link_to 'Destroy', rss_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rss item', new_rss_item_path %>

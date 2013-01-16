@@ -1,0 +1,30 @@
+.faq_list
+  %ul#faq
+    %li.all
+      %p.question
+        = t('dashboard.q1')
+      .answer
+        %p
+          = t('dashboard.a10')
+        %p
+          = raw t('dashboard.a11', :whereclic => t('header.menu.rss_sitemap'))
+    %li.all
+      %p.question
+        = t('dashboard.q2')
+      .answer
+        %p
+          = t('dashboard.a2')
+    %li.all
+      %p.question
+        = t('dashboard.q3')
+      .answer
+        - @rss_twitts.each do |rss_twitt|
+          %p
+            = t('dashboard.a3')
+            %strong
+              = rss_twitt.rss_provider.name
+            %br
+            = rss_twitt.twitt
+            = "(#{rss_twitt.send_at})"
+:javascript
+  $('#faq').simpleFAQ();

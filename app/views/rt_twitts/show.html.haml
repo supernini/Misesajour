@@ -1,0 +1,35 @@
+.breadcrumb
+  %ul
+    %li
+      = link_to t('header.menu.dashboard'), dashboard_url(:src => 'ajax'), :remote => true, :onclick => "$('#tabs ul li').removeClass('active');$('#tabs ul li:first').addClass('active');", :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = link_to t('header.menu.rss_sitemap'), rss_providers_url(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = t('header.menu.rt_twitts')
+%h4.bord
+  = t('header.menu.rt_twitts')
+.form_block
+  = form_for(@rt_twitt, :html => {:remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'}) do |f|
+    <input type="hidden" name="src" value="ajax">
+    - if @rss_provider.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@rss_provider.errors.count, "error")
+          prohibited this rss_provider from being saved:
+        - @rss_provider.errors.full_messages.each do |msg|
+          = msg
+          %br
+      .clear
+    = f.hidden_field :rss_provider_id
+    - @user_twitters.each do |user_twitter|
+      .field
+        = check_box_tag "rt_twitt[user_twitter_ids][]", user_twitter.id, twitter_present?(user_twitter), :id => "rt_twitt_user_twitter_id_#{user_twitter.id}"
+        = f.label "user_twitter_id_#{user_twitter.id}", user_twitter.username
+      .field
+        = f.number_field :frequence, :name => "rt_twitt[frequence][#{user_twitter.id}]", :in => 0...current_user.max_retwitt, :value => (@rss_provider.rt_twitts.where(:user_twitter_id => user_twitter.id).first ? @rss_provider.rt_twitts.where(:user_twitter_id => user_twitter.id).first.frequence : 0)
+        = f.label :frequence
+        = t('rss_providers.perday')
+        %br
+      .clear
+    .field
+      = f.submit 'Modifier', :class => 'btn_m'

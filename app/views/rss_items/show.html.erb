@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rss provider:</b>
+  <%= @rss_item.rss_provider %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @rss_item.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @rss_item.description %>
+</p>
+
+<p>
+  <b>Pubdate:</b>
+  <%= @rss_item.pubdate %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @rss_item.link %>
+</p>
+
+<p>
+  <b>Twitt count:</b>
+  <%= @rss_item.twitt_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_rss_item_path(@rss_item) %> |
+<%= link_to 'Back', rss_items_path %>

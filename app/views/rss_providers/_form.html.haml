@@ -1,0 +1,48 @@
+.form_block
+  = form_for(@rss_provider, :html => {:remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'}) do |f|
+    <input type="hidden" name="src" value="ajax">
+    - if @rss_provider.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@rss_provider.errors.count, "error")
+          prohibited this rss_provider from being saved:
+        - @rss_provider.errors.full_messages.each do |msg|
+          = msg
+          %br
+      .clear
+    .field
+      = f.label :name
+      = t('rss_providers.required')
+      %br/
+      = f.text_field :name
+    .clear
+    .field
+      = f.label :user_twitter
+      = t('rss_providers.required')
+      %br/
+      = f.select :user_twitter_id, current_user.user_twitters.all.map { |user_twitter| [user_twitter.username, user_twitter.id] }
+    .clear
+    .field
+      = f.label :url
+      = t('rss_providers.required')
+      %br/
+      = f.text_field :url
+    .clear
+    .field
+      = f.label :twitt_prefix
+      %br/
+      = f.text_field :twitt_prefix
+    .clear
+    .field
+      = f.label :twitt_suffix
+      %br/
+      = f.text_field :twitt_suffix
+    .clear
+    .field
+      = f.label :frequence
+      = t('rss_providers.perday')
+      %br/
+      = f.number_field :frequence, :in => 0...current_user.max_twitt
+    .clear
+    .field
+      = f.submit :class => 'btn_m'

@@ -1,0 +1,11 @@
+.breadcrumb
+  %ul
+    %li
+      = link_to t('header.menu.dashboard'), dashboard_url(:src => 'ajax'), :remote => true, :onclick => "$('#tabs ul li').removeClass('active');$('#tabs ul li:first').addClass('active');", :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = link_to t('header.menu.rss_sitemap'), rss_providers_url(:src => 'ajax'), :remote => true, :"data-replace" => '.portfolio_sidebar.portfolio_sidebar_right'
+    %li
+      = t('header.menu.rss_sitemap_add')
+%h4.bord
+  = t('header.menu.rss_sitemap_add')
+= render 'form'
